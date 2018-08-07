@@ -13,20 +13,6 @@ import Minesweeper.main.GameStatus;
 public class BoardModel implements BoardModelInterface {
 
     /**
-     * Скрытое поле - расположение игровых элементов и их типизация происходит именно на нем
-     *
-     * @see BoardController#createHiddenBoard
-     */
-    private Cell[][] hiddenBoard;
-    /**
-     * Видимое игроку поле. По мере прогресса игры меняет тип клеток на тип нижнего игрового поля в зависимости от
-     * координат клика и уже установленного типа поля
-     *
-     * @see BoardController#createVisibleBoard
-     */
-    private Cell[][] visibleBoard;
-
-    /**
      * Поле статуса игры
      *
      * @see GameStatus
@@ -39,6 +25,20 @@ public class BoardModel implements BoardModelInterface {
      * @see Difficulty
      */
     public static Difficulty difficulty = Difficulty.EASY;
+
+    /**
+     * Скрытое поле - расположение игровых элементов и их типизация происходит именно на нем
+     *
+     * @see BoardController#createHiddenBoard
+     */
+    private Cell[][] hiddenBoard;
+    /**
+     * Видимое игроку поле. По мере прогресса игры меняет тип клеток на тип нижнего игрового поля в зависимости от
+     * координат клика и уже установленного типа поля
+     *
+     * @see BoardController#createVisibleBoard
+     */
+    private Cell[][] visibleBoard;
 
     public Cell[][] getHiddenBoard() {
         return hiddenBoard;

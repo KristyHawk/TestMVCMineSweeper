@@ -10,11 +10,11 @@ import Minesweeper.main.BoardMVC.Cell;
  */
 public interface BoardModelInterface {
 
-    void setVisibleBoard(Cell[][] visibleBoard);
-
-    void setHiddenBoard(Cell[][] hiddenBoard);
-
     Cell[][] getVisibleBoard();
 
     Cell[][] getHiddenBoard();
+
+    void setVisibleBoard(Cell[][] visibleBoard);
+
+    void setHiddenBoard(Cell[][] hiddenBoard);
 }
